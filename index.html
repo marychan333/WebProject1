@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Form Example</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+<div class="col-sm-6 col-sm-offset-3">
+    <h1>Login Form</h1>
+
+    <form action="process.php" method="POST">
+        <div id="name-group" class="form-group">
+            <label for="name">Username</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Full Name"/>
+        </div>
+
+        <div id="password-group" class="form-group">
+            <label for="pw">Password</label>
+            <input type="text" class="form-control" id="pw" name="pw" placeholder="Muster123"/>
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Submit
+        </button>
+    </form>
+</div>
+</body>
+</html>
