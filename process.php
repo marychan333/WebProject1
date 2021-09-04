@@ -10,12 +10,12 @@ if (empty($_POST['password'])) {
     $errors['password'] = 'Password is required.';
 }
 
-if (!empty($errors)) {
-    $data['success'] = false;
+if (empty($data)) {
+    $data['Failed Login'] = false;
     $data['errors'] = $errors;
-} else {
+} else if (!empty($data)) {
     $data['success'] = true;
-    $data['message'] = 'Success!';
+    $data['message'] = 'Successfully Login!';
 }
 
 echo json_encode($data);

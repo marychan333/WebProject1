@@ -1,5 +1,4 @@
 // Entry Point of the API Server
-
 const express = require('express');
 
 /* Creates an Express application.

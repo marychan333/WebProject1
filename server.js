@@ -1,8 +1,9 @@
 const express = require('express');
-const data = require('./data');
+const data = require('./api/data');
 
 // Initialize App
 const app = express();
+var methodOverride = require("method-override");
 
 // Assign route
 app.use('/', (req, res, next) => {
@@ -17,6 +18,8 @@ app.use('/', (req, res, next) => {
     });
     res.send(filteredUsers);
 });
+
+app.use(methodOverride("PUT", "DELETE"));
 
 // Start server on PORT 5000
 app.listen(5000, () => {
